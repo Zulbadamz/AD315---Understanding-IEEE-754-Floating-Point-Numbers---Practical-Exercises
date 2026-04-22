@@ -1,18 +1,55 @@
-## Getting Started
+# Understanding IEEE 754 Floating Point Numbers - Practical Exercises
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 📌 Project Overview
+This project demonstrates how floating-point numbers are represented and handled using the IEEE 754 standard in Java. It includes practical experiments to show precision errors, special values, overflow/underflow, and binary representation of floating-point numbers.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 🎯 Objectives
+- Convert decimal numbers to IEEE 754 32-bit representation
+- Understand floating-point arithmetic behavior
+- Explore precision errors in real computations
+- Demonstrate special values like NaN and Infinity
+- Observe overflow and underflow cases
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+---
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 🧠 Key Concepts Covered
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### 1. IEEE 754 Representation
+The program converts floating-point numbers into their 32-bit binary IEEE 754 format using Java’s built-in methods.
 
-## Dependency Management
+### 2. Floating-Point Arithmetic Issues
+Examples such as:
+- `0.1 + 0.2`
+- `1.0 / 3.0`
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+These demonstrate precision errors due to binary representation limitations.
+
+---
+
+### 3. Special Values
+The program generates and tests:
+- Positive Infinity
+- Negative Infinity
+- NaN (Not a Number)
+
+Example:
+- NaN is not equal to itself → `NaN != NaN` is `true`
+
+---
+
+### 4. Overflow and Underflow
+- Overflow example: very large numbers result in `Infinity`
+- Underflow example: extremely small numbers become `0.0`
+
+---
+
+## ▶️ How to Run
+
+### 1. Compile the program
+
+javac src/IEEE754Demo.java
+
+### 2. Run the program
+java -cp src IEEE754Demo
